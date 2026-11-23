@@ -1,0 +1,235 @@
+:root {
+  /* ===== 品牌与语义色（技术方案 8.2 / 表 8-1） ===== */
+  --color-primary: #17416b;
+  --color-primary-light: #e8f0f8;
+  --color-accent: #2e6da4;
+  --color-success: #1f8a5b;
+  --color-warning: #c77c0e;
+  --color-danger: #b4372f;
+  --color-text: #1f2329;
+  --color-text-secondary: #5b6673;
+  --color-text-muted: #8a94a6;
+  --color-border: #d3dce6;
+  --color-border-light: #e3e9f0;
+  --color-bg: #f5f7fa;
+  --color-surface: #ffffff;
+
+  /* ===== Element Plus 主题映射 ===== */
+  --el-color-primary: #17416b;
+  --el-color-primary-light-3: #5d7a97;
+  --el-color-primary-light-5: #8ba0b5;
+  --el-color-primary-light-7: #b9c6d3;
+  --el-color-primary-light-8: #d1d9e1;
+  --el-color-primary-light-9: #e8f0f8;
+  --el-color-primary-dark-2: #123456;
+  --el-color-success: #1f8a5b;
+  --el-color-warning: #c77c0e;
+  --el-color-danger: #b4372f;
+  --el-color-error: #b4372f;
+  --el-text-color-primary: #1f2329;
+  --el-text-color-regular: #5b6673;
+  --el-text-color-secondary: #8a94a6;
+  --el-text-color-placeholder: #a8b1bd;
+  --el-border-color: #d3dce6;
+  --el-border-color-light: #e3e9f0;
+  --el-border-color-lighter: #edf1f5;
+  --el-border-color-extra-light: #f2f5f8;
+  --el-fill-color-blank: #ffffff;
+  --el-fill-color-light: #f5f7fa;
+  --el-fill-color-lighter: #f8fafc;
+  --el-bg-color-page: #f5f7fa;
+  --el-border-radius-base: 2px;
+  --el-border-radius-small: 2px;
+  --el-font-size-base: 14px;
+  --el-table-header-bg-color: #f5f7fa;
+  --el-table-header-text-color: #5b6673;
+  --el-table-row-hover-bg-color: #f7fafd;
+  --el-table-border-color: #e3e9f0;
+  --el-table-text-color: #1f2329;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', -apple-system, 'Segoe UI', Roboto,
+    sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* 数字统一等宽，保证表格纵向对齐 */
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+.mono {
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* ===== 通用容器 ===== */
+.surface {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+}
+
+.page-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--color-text);
+}
+
+.card-subtitle {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-text-muted);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.toolbar__filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ===== Element Plus 细节贴合方案视觉 ===== */
+.el-button {
+  font-weight: 400;
+}
+
+.el-button--primary {
+  --el-button-hover-bg-color: #123456;
+  --el-button-hover-border-color: #123456;
+  --el-button-active-bg-color: #0f2a44;
+  --el-button-active-border-color: #0f2a44;
+}
+
+.el-table {
+  font-size: 13px;
+  --el-table-header-bg-color: #f5f7fa;
+}
+
+.el-table th.el-table__cell {
+  padding: 12px 0;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.el-table td.el-table__cell {
+  padding: 14px 0;
+}
+
+.el-table .cell {
+  line-height: 20px;
+}
+
+.el-table__body tr:hover > td.el-table__cell {
+  background: #f7fafd;
+}
+
+.el-table__empty-text {
+  color: var(--color-text-muted);
+}
+
+.el-pagination {
+  --el-pagination-button-bg-color: transparent;
+  --el-pagination-hover-color: var(--color-primary);
+}
+
+.el-dialog {
+  border-radius: 4px;
+  padding: 0;
+}
+
+.el-dialog__header {
+  margin-right: 0;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.el-dialog__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.el-dialog__body {
+  padding: 20px;
+}
+
+.el-dialog__footer {
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.el-form-item__label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.el-alert {
+  border-radius: 2px;
+}
+
+.el-tag {
+  border-radius: 2px;
+}
+
+.el-input-number {
+  width: 100%;
+}

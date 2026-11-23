@@ -1,0 +1,4 @@
+# pnpm 11 构建脚本白名单（esbuild 需要原生二进制、vue-demi 需要 postinstall 切换 Vue 版本）
+allowBuilds:
+  esbuild: true
+  vue-demi: true

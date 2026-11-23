@@ -1,0 +1,5 @@
+{
+  "files.exclude": {
+    "**/youtube-search-*.png": true
+  }
+}
